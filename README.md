@@ -9,12 +9,11 @@
 </div>
 
 <div align="center">
-	<a href="https://travis-ci.org/bheisler/TinyTemplate">
-        <img src="https://travis-ci.org/bheisler/TinyTemplate.svg?branch=master" alt="Travis-CI">
+    <a href="https://github.com/bheisler/TinyTemplate/actions">
+        <img src="https://github.com/bheisler/TinyTemplate/workflows/Continuous%20integration/badge.svg" alt="Continuous integration">
     </a>
-    |
     <a href="https://crates.io/crates/tinytemplate">
-        <img src="https://img.shields.io/crates/v/tinytemplate.svg" alt=Crates.io">
+        <img src="https://img.shields.io/crates/v/tinytemplate.svg" alt="Crates.io">
     </a>
 </div>
 
@@ -63,16 +62,14 @@ First, add TinyTemplate and serde-derive to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
-tinytemplate = "1.0"
-serde_derive = "1.0"
+tinytemplate = "1.1"
+serde = { version = "1.0", features = ["derive"] }
 ```
 
 Then add this code to "src.rs":
 
 ```rust
-#[macro_use]
-extern crate serde_derive;
-extern crate tinytemplate;
+use serde::Serialize;
 
 use tinytemplate::TinyTemplate;
 use std::error::Error;
