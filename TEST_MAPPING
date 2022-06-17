@@ -11,11 +11,6 @@
       "path": "external/rust/crates/unicode-xid"
     }
   ],
-  "postsubmit": [
-    {
-      "name": "tinytemplate_test_src_lib"
-    }
-  ],
   "presubmit": [
     {
       "name": "tinytemplate_test_src_lib"
